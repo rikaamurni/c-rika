@@ -1,0 +1,59 @@
+#include<stdio.h>
+#include<conio.h>
+
+int pilihan,jam,gaji_tetap,upah_lembur,upah_tambahan,gaji;
+
+void main()
+{
+
+do{
+printf("Menu Perhitungan gaji karyawan berdasarkan golongan : \n");
+printf("1. Golongan 1\n");
+printf("2. Golongan 2\n");
+printf("3. Golongan 3\n");
+printf("4. Golongan 4\n");
+printf("5. Keluar\n");
+printf("Masukkan nomor pilihan menu golongan karyawan = ");
+scanf("%i",&pilihan);
+
+switch(pilihan)
+{
+case1:
+printf("Masukkan Lama Jam Lembur = ");
+scanf("%f", &jam);
+gaji_tetap=2500000;
+upah_lembur= 15000*jam;
+if(jam>15) {
+upah_tambahan=15*upah_lembur/100; }
+
+
+break;
+case2:
+printf("Masukkan Lama Jam Lembur = ");
+scanf("%f", &jam);
+upah_lembur= 12500*jam;
+printf("Total Upah Lembur = %.2f", upah_lembur);
+break;
+case3:
+printf("Masukkan Lama Jam Lembur = ");
+scanf("%f", &jam);
+upah_lembur= 10000*jam;
+printf("Total Upah Lembur = %.2f", upah_lembur);
+break;
+case4:
+printf("Masukkan Lama Jam Lembur = ");
+scanf("%f", &jam);
+upah_lembur= 7500*jam;
+printf("Total Upah Lembur = %.2f", upah_lembur);
+break;
+}
+getch();
+}
+while(pilihan!=5);
+printf("\nTotal Gaji Karyawan = Gaji tetap + Total Upah Lembur + Upah Tambahan");
+printf("\nTotal Gaji Karyawan = %.2f + %.2f + %.2f = %.2f", gaji_tetap,upah_lembur,upah_tambahan);
+
+getch();
+}
+
+
